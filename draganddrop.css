@@ -1,0 +1,14 @@
+#left{
+    background-color:aqua;
+    width:400px;
+    height:400px;
+    position:absolute;
+}
+
+#right{
+    background-color:greenyellow;
+    width:400px;
+    height:400px;
+    float:right;
+    margin-right:15px;
+}

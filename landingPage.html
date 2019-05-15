@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+        <style>
+            header
+            {
+                /*background-image: url("../image/images.png");*/
+                background: linear-gradient(to right, rgba(255, 0, 0, 1) , rgba(255, 255, 0 , 0));
+                background-size: cover;
+                height:100vh;
+                
+            }
+            .logocontainer{
+                border-radius: 15px;
+                color: red;
+                position:absolute;
+                height: 250px;;
+                width:250px;
+                border-radius:15px;
+                background-color:white;
+            }
+            .logoimage{
+              margin-top:0px;
+              margin-left:0px;
+              position:absolute;   
+            }
+            .allmenu{
+                float:right;
+                list-style-type: none;
+                color:turquoise;
+                font-weight:bold;                
+                margin-right:30px;
+                margin-top:15px;
+            }            
+            .eachitem{
+                align-items: stretch;
+                font-size:30px;
+                display:inline;
+                padding:10px;
+            }
+            .eachitem:hover{
+                color:chocolate;
+                
+            }
+            .messagecontainer{
+                font-size:40px;
+                position:absolute;
+                top:30%;
+                left:1%;
+                color:burlywood;
+                margin-top: 150px; 
+            }
+            button{
+                padding-left: 8px;
+                padding-Right: 8px;
+                padding-Top: 5px;
+                padding-bottom: 5px;
+                margin:5px;
+                border-radius:5px;
+                border-color:yellowgreen;
+                background-color: aqua;
+                color:blue;
+                margin-top: 450px;
+            }
+
+            .videobackground{
+                position: fixed;
+                min-width: 100%;
+                min-height:100%;
+                width:auto;
+                height:auto;
+                z-index:-100; 
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <video class="videobackground" autoplay loop>
+                <source src="./video/grb_2.mp4">
+            </video>
+            <div class="logocontainer">
+                <img id="logoimage" src="cognizantLogo.png" alt="cognizant"  >  
+            </div>
+            <div>
+            <ul class="allmenu">
+                <li  class="eachitem">About Us</li>
+                <li class="eachitem">Research</li>
+                <li class="eachitem">Innovation</li>
+                <li class="eachitem">Careers</li>
+                <li class="eachitem">Labs</li>
+                <li class="eachitem">Get in Touch</li>
+            </ul></div>
+            <div class="messagecontainer">
+                <div class="message">Self Confidence Drive!!! 
+                    <br>Think you are the greatest! you are the boldest!                     
+                </div>
+            </div>
+            <div>
+                <button >Read More</button>
+                <button >Register</button>
+                <button >Sign In</button>
+            </div>
+
+        </header>
+
+    </body>
+
+
+</html>

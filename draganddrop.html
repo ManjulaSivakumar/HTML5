@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DragandDrop</title>
+        <link rel="stylesheet" href="draganddrop.css">
+    </head>
+    <body>
+        <h1>Drag and Drop</h1>
+        <div id="left" ondragover="dragstarted(event)">
+            <image id="ctslogo"
+            src="../image/bgnew.png"
+            alt="" width="150"
+            draggable="true"
+            ondragstart="imagedragged(event)"
+            ></image>
+        </div>
+        <div id="right" ondragover="praparingfordrop(event)" ondrop="dropImage(event)">
+              Image can be dropped here...  
+            </div>
+    </body>
+    <script>
+        var dragstarted = function(e){
+            e.preventDefault()
+            console.log(e)
+        }
+        var imagedragged = function(e){
+            console.log("Dragging logo..")
+            console.log(e.target.id)
+            e.dataTransfer.setData("imageid" , e.target.id)
+        } 
+
+        var praparingfordrop = function(e){
+            e.preventDefault()
+            console.log(e)
+        }
+
+        var dropImage = function(e){
+            var newImageId = e.dataTransfer.getData("imageid")
+            console.log(newImageId)
+            var tempLogo = document.getElementById(newImageId)
+            e.target.innerHTML =""
+            e.target.appendChild(tempLogo)
+            
+        }
+
+    </script>
+
+</html>

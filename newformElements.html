@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>new Form Elements</title>
+        <style>
+            body{
+                background-color:lightblue;
+            }
+        </style>
+    </head>
+    <body onload="SetDefaultValues()">
+        <h2>CSS Basics </h2>
+        <form>
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div>
+                    <label>Name </label>
+                     <input type="text" 
+                    autofocus required pattern="[A-Za-z]\s*{0,10}">
+                    <br><br>
+                    <label>Date of Birth</label>
+                    <input id="todayDate" type="date" min="2019-05-06" step="7" size="50">
+                    <br><br>
+                    <label>Age</label>
+                    <input type="number" min="10" max="100" step="10" size ="50">
+                </div>
+            <br> 
+
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Professional Details</legend>
+                <Label>Email</Label>
+                <input type="email" ><br><br>
+                <Label>Website</Label>
+                <input type="url" ><br><br>
+                <Label>How was the session?</Label>
+                <br><input type="range" size="50" list="scores">
+                <datalist id= "scores">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </datalist>
+                <br><br>
+                <div>
+                    <input type="color">
+                </div>
+                <br>
+                <div>
+                    <progress min="0" max="100" value="5"></progress>
+                </div>
+                <br>
+                <Label>Select Your Location</Label>
+                <input type="text" size ="50" list ="citynames">
+                <datalist id="citynames">
+                    <option value="Chennai">Chennai</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Vellore">Vellore</option>
+                    <option value="Trichy">Trichy</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                </datalist>
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <script>
+        var SetDefaultValues = function(){
+            var date = new Date().toISOString()
+            console.log(date)
+            var todayValue = date.split("T")[0]
+            document.getElementById("todayDate").max = todayValue + 10
+        }
+        </script>
+        
+    </body>
+
+
+</html>

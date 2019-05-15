@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> HTML5 Welcome</title>
+    </head>
+    <body>
+        <h1> welcome to HTML5</h1>
+        <h3>Video</h3>
+
+        <video id="myvideo" width="400" controls>
+            <source src="examplemp4.mp4" type="">
+        </video>
+
+        <br>
+        <button id="playbtn" onclick="videoPlay()">Play</button>
+        <button id="pauseid" onclick="videoPause()" disabled>Pause</button>
+    
+        <h3>  Youtube Video</h3>
+        <iframe src="https://www.youtube.com/embed/IFncZA5k_1k"></iframe>
+           
+        
+        <script>
+
+            var videoref = document.getElementById("myvideo")
+            var playref = document.getElementById("playbtn")
+            var pauseref = document.getElementById("pauseid")
+
+            function videoPlay(){
+                videoref.play()
+                playref.disabled= true
+                pauseref.disabled = false
+            }
+
+            function videoPause(){
+                videoref.pause()
+                playref.disabled= false
+                pauseref.disabled = true
+            }
+
+        </script>
+
+
+        </iframe>
+    </body>
+</html>
+
